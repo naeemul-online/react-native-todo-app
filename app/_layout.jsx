@@ -6,8 +6,9 @@ export default function RootLayout() {
   return (
     <ThemeProvider>
       <SafeAreaProvider>
-        <Stack>
-          <Stack.Screen name="index" options={{ headerShown: false }} />
+        <Stack screenOptions={{ headerShown: false }}>
+          <Stack.Screen name="index"  />
+          <Stack.Screen name="index/[id]"  />
           <Stack.Screen name="(not-found)" options={{ title: "Not Found" }} />
         </Stack>
       </SafeAreaProvider>
